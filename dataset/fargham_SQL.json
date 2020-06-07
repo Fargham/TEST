@@ -1,0 +1,93 @@
+{
+	"name": "fargham_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "fargham_sql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "EmployeeID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NationalIDNumber",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ContactID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LoginID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ManagerID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BirthDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MaritalStatus",
+				"type": "nchar"
+			},
+			{
+				"name": "Gender",
+				"type": "nchar"
+			},
+			{
+				"name": "HireDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SalariedFlag",
+				"type": "bit"
+			},
+			{
+				"name": "VacationHours",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "SickLeaveHours",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "CurrentFlag",
+				"type": "bit"
+			},
+			{
+				"name": "rowguid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "HumanResources",
+			"table": "CustomerInformation"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

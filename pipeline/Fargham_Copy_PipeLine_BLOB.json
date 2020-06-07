@@ -1,0 +1,62 @@
+{
+	"name": "Fargham_Copy_PipeLine_BLOB",
+	"properties": {
+		"description": "Copies the data from farghamadf Blob Storage input folder  to farghamadf Blob Storage Output folder",
+		"activities": [
+			{
+				"name": "Copy_From_Blob_To_Blob",
+				"description": "Copies the data from farghamstrorageadf BLOB Storage Input folder to  farghamstrorageadf BLOB Storage Output folder",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "InputADWFileBlobStorage",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "OutputADWFileBlobStorage",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [
+			"BLOB Storage Pipeline "
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
