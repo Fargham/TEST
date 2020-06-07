@@ -1,5 +1,5 @@
 {
-	"name": "fargham_SQL",
+	"name": "fargham_SQL_Test",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "fargham_sql",

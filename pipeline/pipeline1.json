@@ -61,7 +61,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "fargham_SQL",
+						"referenceName": "fargham_SQL_Test",
 						"type": "DatasetReference"
 					}
 				],
